@@ -59,7 +59,8 @@
         <div class="section">
             <div>Navigate the DOM</div>
             <div>Up - down - left - right</div>
-            <div>Expand\Collapse all (Right click OR alt-click on arrow)</div>
+            <div>Expand\Collapse all</div>
+            <div>Right click OR alt-click on arrow</div>
         </div>
         <div class="section">
             <div>Finding elements</div>
@@ -73,13 +74,13 @@
             <div>copy as xpath</div>
         </div>
         <div class="section">
-            <div>highlight DOM changes</div> <button type="button" id="highlight_change_btn">click me!</button>
+          <div>highlight DOM changes</div>
+            <div><button type="button" id="highlight_change_btn">click me!</button></div>
             <div id="highlight_change_div">highlight DOM changes</div>
         </div>
         <div class="section">
             <div>Pseudo classes</div>
             <div><input type="text" id="pseudo" name="pseudo" value="Pseudo classes"></div>
-            <div>Visited</div>
             <div>Right click</div>
             <div>:hov button</div>
             <div>orange dot</div>
@@ -160,12 +161,7 @@
             <div>chrome://inspect/</div>
             <div>custom ui</div>
             <div><a href="https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi/">custom ui</a></div>
-            <div>
-                empty html
-                <pre>
-                data:text/html,<!doctype html>
-              </pre>
-            </div>
+            <div>empty html <input type="text" name="" value="data:text/html,<!doctype html>" readonly></div>
             <div>Flag --auto-open-devtools-for-tabs</div>
             <div>remote debug and inspect</div>
         </div>
@@ -192,7 +188,9 @@
         });
         document.getElementById('dom_js').innerText = "I'm js!";
         $('#highlight_change_btn').click(function() {
-            $('#highlight_change_div').append('<div>' + Math.random() + '</div>')
+            var r = Math.round(Math.random() * 100) + '';
+            $('#highlight_change_div').html('<div>' + r + '</div>');
+            $('#highlight_change_btn').addClass(r)
         });
         $('#log_el_btn').click(function() {
             console.log(this);

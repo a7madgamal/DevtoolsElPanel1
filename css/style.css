@@ -5,6 +5,7 @@
 #pseudo {
     cursor: pointer;
 }
+
 #pseudo:hover {
     color: red;
 }
@@ -25,16 +26,20 @@
     box-sizing: border-box
 }
 
-body, html {
+body, html, input, button {
     font-family: monospace;
     font-size: 25px;
     margin: 0;
 }
 
-.section>div:first-child {
-    font-size: 200%;
+.section>div {
     background-color: white;
     box-shadow: 1px 1px 5px 0px rgba(154, 154, 154, 0.63);
+    margin-bottom: 5px;
+}
+
+.section>div:first-child {
+    font-size: 200%;
     margin-bottom: 33px;
 }
 
