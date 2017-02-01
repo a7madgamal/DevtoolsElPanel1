@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kelmteenjs - elements panel - pt1</title>
 </head>
 <body>
     <div class="section-wrapper">
-        <!-- data-hash="section-hash-name" -->
         <div class="section">
             <div>Elements Panel</div>
             <div>part 1: dom panel</div>
@@ -19,10 +22,16 @@
             <div>HTML vs. DOM</div>
             <div id="dom_js"></div>
             <div id="dom_css"></div>
-            <div>
-                <p>I'm broken :'(
+            <div class=oops>
+                I'm broken!
             </div>
-            <div><input type="text" value="I have hidden stuff!"></div>
+            <div>
+              <video id="video1" controls>
+                <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                  Your browser does not support HTML5 video.
+              </video>
+            </div>
         </div>
 
         <div class="section">
@@ -94,22 +103,22 @@
         </div>
         <div class="section">
             <div>Editing (whole elements)</div>
-            <div>hide (h) (gray dot for hidden elements)</div>
+            <div>hide (h) (gray dot)</div>
             <div>delete (del)</div>
             <div>dragging</div>
-            <div>Cut - copy - paste</div>
-            <div>press left to select parent</div>
+            <div>Cut - Copy - Paste</div>
+            <div>prevent nesting</div>
         </div>
         <div class="section">
             <div>Editing (text and attrs)</div>
             <div>Double click</div>
             <div>Enter</div>
-            <div>Right click > add/edit attr</div>
-            <div>tab shift-tab loop</div>
+            <div>Right click</div>
+            <div>tab - shift-tab - loop</div>
             <div>edit tag type</div>
             <div style="width=100px">numerical values</div>
-            <div class="num1num2">numerical classes</div>
-            <div>alt = 0.1 shift = 10 ctrl = 100</div>
+            <div class="class1">numerical classes</div>
+            <div>alt*0.1 shift*10 ctrl*100</div>
         </div>
 
         <div class="section">
@@ -127,9 +136,15 @@
         </div>
         <div class="section">
             <div>Special elements</div>
-            <div>Img: hover for thumbnail, dimentions, url</div>
-            <div>Img: in sources, save, copy as dataurl</div>
-            <div>Links: right click links to open in sources, open in new tab, copy link</div>
+            <div>Img</div>
+            <div>Img: Right click</div>
+            <div>A: Right click</div>
+            <div>
+              <img src="img/img.png" alt="sample image" style="width:100%">
+            </div>
+            <div>
+              <a href="https://www.youtube.com/channel/UC7Ca8ilbTCu9sj-Ux6JaGWw">Link</a>
+            </div>
         </div>
         <div class="section">
             <div>options</div>
@@ -164,9 +179,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     <script src="js/lethargy.min.js"></script>
-    <!-- <script src="https://rawgit.com/Olical/EventEmitter/master/EventEmitter.min.js"></script> -->
+    <script src="https://rawgit.com/Olical/EventEmitter/master/EventEmitter.min.js"></script>
     <script src="js/smartscroll.min.js"></script>
     <script type="text/javascript">
         $.smartscroll({
@@ -177,7 +191,7 @@
             keepHistory: false,
             sectionWrapperSelector: ".section-wrapper",
             sectionClass: "section",
-            animationSpeed: 300,
+            animationSpeed: 500,
             headerHash: "header",
             breakpoint: null,
             eventEmitter: null,

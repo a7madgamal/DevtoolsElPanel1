@@ -1,3 +1,20 @@
+body {
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-image: url('../img/pattern.png');
+    background-size: cover;
+    /*font-family: 'Indie Flower', cursive;*/
+    /*font-family: 'Titillium Web';*/
+    font-family: 'Alegreya Sans';
+    font-size: 25px;
+    margin: 0;
+
+}
+
+input {
+    text-align: center;
+}
+
 #dom_css:after {
     content: "I'm css!";
 }
@@ -22,53 +39,44 @@
     display: table;
     width: 100%;
     text-align: center;
-    padding: 15%;
-    box-sizing: border-box
-}
-
-body, html, input, button {
-    font-family: monospace;
-    font-size: 25px;
-    margin: 0;
+    padding: 7%;
+    box-sizing: border-box;
 }
 
 .section>div {
     background-color: white;
-    box-shadow: 1px 1px 5px 0px rgba(154, 154, 154, 0.63);
+    box-shadow: 3px 3px 9px 0px rgba(113, 113, 113, 0.81);
     margin-bottom: 5px;
+    padding: 3px;
+    padding: 0px 3px 6px 3px;
 }
 
 .section>div:first-child {
     font-size: 200%;
     margin-bottom: 33px;
+    text-transform: uppercase;
 }
 
-.section:nth-child(6n+1) {
-    height: 700px;
+/*.section:nth-child(6n+1) div {
     background-color: #FF708F
 }
 
-.section:nth-child(6n+2) {
-    height: 1000px;
+.section:nth-child(6n+2) div {
     background-color: #E89D5D
 }
 
-.section:nth-child(6n+3) {
-    height: 500px;
+.section:nth-child(6n+3) div {
     background-color: #FFE33E
 }
 
-.section:nth-child(6n+4) {
-    height: 900px;
+.section:nth-child(6n+4) div {
     background-color: #7AE856
 }
 
-.section:nth-child(6n+5) {
-    height: 1500px;
+.section:nth-child(6n+5) div {
     background-color: #7AFFE6
 }
 
-.section:nth-child(6n) {
-    height: 400px;
+.section:nth-child(6n) div {
     background-color: #6E74F5
-}
+}*/
