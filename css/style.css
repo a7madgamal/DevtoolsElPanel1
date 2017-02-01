@@ -49,10 +49,11 @@ input {
     margin-bottom: 5px;
     padding: 3px;
     padding: 0px 3px 6px 3px;
+    cursor: default;
 }
 
 .section>div:first-child {
-    font-size: 200%;
+    font-size: 170%;
     margin-bottom: 33px;
     text-transform: uppercase;
 }
