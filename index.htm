@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -10,14 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kelmteenjs - elements panel - pt1</title>
 </head>
+
 <body>
     <div class="section-wrapper">
         <div class="section">
             <div>Elements Panel</div>
-            <div>part 1: dom panel</div>
-            <div>VERY. DETAILED. VIDEO.</div>
+            <div>Part 1: dom panel</div>
+            <div>Watch on another screen</div>
+            <div>Chrome v56 - 3-2-2017</div>
+            <div>USE this page!</div>
         </div>
-
         <div class="section">
             <div>HTML vs. DOM</div>
             <div id="dom_js"></div>
@@ -26,7 +29,7 @@
                 I'm broken!
             </div>
             <div>
-              <video id="video1" controls>
+                <video id="video1" controls>
                 <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                 <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
                   Your browser does not support HTML5 video.
@@ -37,20 +40,28 @@
         <div class="section">
             <div>Open</div>
             <div>Right click > Inspect</div>
-            <div>Ctrl Shift C</div>
+            <div>Ctrl-Shift-C (inspector mode)</div>
             <div>F12</div>
-            <div>Ctrl [</div>
-            <div>Ctrl ]</div>
+            <div>Ctrl-[ \ ]</div>
             <div>drag and drop tabs</div>
             <div>options: enable 1-9</div>
         </div>
 
-        <div class="section">
-            <div>Finding elements</div>
+        <div id="demoId" class="section class1 class2 class3 class4 class5">
+            <div>Finding elements (1)</div>
             <div>Inspect > Page Hover</div>
             <div>DOM tree Hover</div>
             <div>CSS Selectors hover</div>
             <div>breadcrumps</div>
+        </div>
+        <div class="section">
+            <div>Finding elements (2)</div>
+            <div>ctrl-f</div>
+            <div>count</div>
+            <div>selectors + values</div>
+            <div>xpath</div>
+            <div>copy as selector</div>
+            <div>copy as xpath</div>
         </div>
         <div class="section">
             <div>Inspection</div>
@@ -58,7 +69,6 @@
             <div>dimensions</div>
             <div>mARGiN > oRANGe</div>
             <div>paddiNG > GreeN</div>
-            <div>DOM element vertical line</div>
             <div>Right click === … button</div>
         </div>
         <div class="section">
@@ -66,40 +76,6 @@
             <div>Up - down - left - right</div>
             <div>Expand\Collapse all</div>
             <div>Right click OR alt-click on arrow</div>
-        </div>
-        <div class="section">
-            <div>Finding elements</div>
-            <div>ctrl-f</div>
-            <div>ctrl-shft-f</div>
-            <div>count</div>
-            <div>values</div>
-            <div>selectors + values</div>
-            <div>xpath</div>
-            <div>copy as selection xpath</div>
-            <div>copy as xpath</div>
-        </div>
-        <div class="section">
-            <div>highlight DOM changes</div>
-            <div><button type="button" id="highlight_change_btn">click me!</button></div>
-            <div id="highlight_change_div">highlight DOM changes</div>
-        </div>
-        <div class="section">
-            <div>Pseudo classes</div>
-            <div><input type="text" id="pseudo" name="pseudo" value="Pseudo classes"></div>
-            <div>Right click</div>
-            <div>:hov button</div>
-            <div>orange dot</div>
-        </div>
-        <div class="section">
-            <div>debugging</div>
-            <div>Right click > break on</div>
-            <div>scroll into view</div>
-            <div><button type="button" id="log_el_btn"> Log DOM el </button></div>
-            <div><button type="button" id="log_jq_btn"> Log jq object </button></div>
-            <div>Same right-click in console</div>
-            <div>dir(el) to show as object (use with $_)</div>
-            <div>==$0 $_ $1-$5</div>
-            <div>$() $$()</div>
         </div>
         <div class="section">
             <div>Editing (whole elements)</div>
@@ -116,23 +92,20 @@
             <div>Right click</div>
             <div>tab - shift-tab - loop</div>
             <div>edit tag type</div>
-            <div style="width=100px">numerical values</div>
-            <div class="class1">numerical classes</div>
+            <div style="width=100px" class="class1">numerical values</div>
             <div>alt*0.1 shift*10 ctrl*100</div>
+            <div>cls button</div>
         </div>
 
         <div class="section">
             <div>Editing (html)</div>
             <div>F2</div>
             <div>Right click > Edit html</div>
-            <div>click outside to confirm, esc to cancel</div>
-            <div>copy outerhtml OR copy</div>
-            <div>select ALL > shift-tab to indent</div>
-            <div>DOM !== HTML</div>
-        </div>
-        <div class="section">
-            <div>undo</div>
-            <div>redo</div>
+            <div>Click outside to confirm, esc to cancel</div>
+            <div>Copy outerhtml OR copy</div>
+            <div>Select ALL > shift-tab to indent</div>
+            <div>Undo</div>
+            <div>Redo</div>
         </div>
         <div class="section">
             <div>Special elements</div>
@@ -140,33 +113,55 @@
             <div>Img: Right click</div>
             <div>A: Right click</div>
             <div>
-              <img src="img/img.png" alt="sample image" style="width:100%">
+                <img src="img/img.png" alt="sample image" style="width:100%">
             </div>
             <div>
-              <a href="https://www.youtube.com/channel/UC7Ca8ilbTCu9sj-Ux6JaGWw">Link</a>
+                <a href="https://www.youtube.com/channel/UC7Ca8ilbTCu9sj-Ux6JaGWw">Link</a>
             </div>
         </div>
         <div class="section">
-            <div>options</div>
-            <div>theme</div>
-            <div>shadow elements</div>
-            <div>rulers</div>
-            <div>panel layout</div>
-            <div>wordwrap</div>
-            <div>html comments</div>
+            <div>Highlight DOM changes</div>
+            <div><button type="button" id="highlight_change_btn">click me!</button></div>
+            <div id="highlight_change_div">highlight DOM changes</div>
+        </div>
+        <div class="section">
+            <div>Pseudo classes</div>
+            <div><input type="text" id="pseudo" name="pseudo" value="Pseudo classes"></div>
+            <div>Right click</div>
+            <div>:hov button</div>
+            <div>Orange dot</div>
+        </div>
+        <div class="section">
+            <div>Debugging</div>
+            <div>Right click > break on</div>
+            <div>Scroll into view</div>
+            <div><button type="button" id="log_el_btn"> Log DOM el </button></div>
+            <div><button type="button" id="log_jq_btn"> Log jq object </button></div>
+            <div>Same right-click in console</div>
+            <div>dir(el)</div>
+            <div>==$0 $_ $1-$5</div>
+            <div>$() $$()</div>
+        </div>
+        <div class="section">
+            <div>Options</div>
+            <div>Theme</div>
+            <div>Shadow elements</div>
+            <div>Rulers</div>
+            <div>Panel layout</div>
+            <div>Wordwrap</div>
+            <div>HTML comments</div>
             <!-- <div>I'm a comment</div> -->
-            <div>reveal DOM on hover (auto open in tree)</div>
-            <div>auto open for popups <button type="button" id="popup_btn">popup!</button></div>
+            <div>Reveal DOM on hover</div>
+            <div>Auto open for popups <button type="button" id="popup_btn">popup!</button></div>
             <div>Disable paused state overlay</div>
-            <div>rendering tab > emulate css media</div>
         </div>
         <div class="section">
             <div>Advanced pt1</div>
+            <div><a href="chrome://flags">chrome://flags</a></div>
             <div>Experiments</div>
-            <div>chrome://flags</div>
             <div>shift key 6 times</div>
             <div>Layout editor</div>
-            <div>inspect the inspector ctrl-shift-j</div>
+            <div>Rendering tab > emulate css media</div>
         </div>
         <div class="section">
             <div>Advanced pt2</div>
@@ -174,7 +169,8 @@
             <div>chrome://inspect/</div>
             <div><a href="https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi/">custom ui</a></div>
             <div>empty html <input type="text" name="" value="data:text/html,<!doctype html>" readonly></div>
-            <div>Flag --auto-open-devtools-for-tabs</div>
+            <!-- <div>Flag - -auto-open-devtools-for-tabs</div> -->
+            <div>inspect the inspector ctrl-shift-j</div>
             <div>remote debug and inspect</div>
         </div>
     </div>
