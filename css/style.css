@@ -22,14 +22,17 @@ input {
 
 #pseudo:hover {
     color: red;
+    text-decoration: underline;
 }
 
 #pseudo:focus {
     color: blue;
+    font-size: 200%
 }
 
 #pseudo:active {
     color: green;
+    font-family: monospace;
 }
 
 .section {
