@@ -50,6 +50,14 @@ input {
     line-height: 72px;
 }
 
+.section>div:first-child a {
+  width: 28px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../img/logo.png);
+  background-size: cover;
+}
+
 .section>div {
     background-color: white;
     box-shadow: 3px 3px 4px -3px rgba(113, 113, 113, 0.81);
@@ -73,12 +81,15 @@ progress {
     -webkit-appearance: none;
     z-index: 1;
 }
+
 progress::-webkit-progress-bar {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 .flat::-webkit-progress-value {
-  background-color: red;
+    background-color: red;
 }
+
 .progress-container {
     width: 100%;
     background-color: transparent;
