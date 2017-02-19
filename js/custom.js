@@ -51,6 +51,11 @@ $(document).ready(function() {
             value: getValue()
         });
     });
+
+    // hide google bug!
+    window.setTimeout(function(){
+      console.clear()
+    }, 800)
 });
 
 
