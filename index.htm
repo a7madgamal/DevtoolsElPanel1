@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
@@ -9,6 +10,11 @@
 </head>
 
 <body>
+    <progress value="0" id="progressBar" class="flat">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
     <div class="section-wrapper">
         <div class="section" data-hash="intro">
             <div>Elements Panel</div>
@@ -17,6 +23,7 @@
             <div>USE this page!</div>
             <div>Chrome v56</div>
         </div>
+
         <div class="section" data-hash="htmldom">
             <div>HTML vs. DOM</div>
             <div id="dom_js"></div>
@@ -53,7 +60,8 @@
             <div>selectors + values</div>
             <div>copy as selector/xpath</div>
         </div>
-        <div class="section" data-hash="inspct">
+
+        <div class="section" data-hash="inspect">
             <div>Inspection</div>
             <div>el#id.class - dimensions</div>
             <div>oRANGe: mARGiN - GreeN: paddiNG</div>
@@ -63,12 +71,14 @@
             <!-- <div>I'm a comment</div> -->
             <div>OPTION Reveal DOM on hover</div>
         </div>
+
         <div class="section" data-hash="nav">
             <div>Navigate the DOM</div>
             <div>Up - down - left - right</div>
             <div>Expand\Collapse all</div>
             <div>Right click OR alt-click on arrow</div>
         </div>
+
         <div class="section" data-hash="edtwhole">
             <div>Editing (whole elements)</div>
             <div>hide (h) (gray dot)</div>
@@ -78,6 +88,7 @@
             <div>prevent nesting</div>
             <div>… button</div>
         </div>
+
         <div class="section" data-hash="edt">
             <div>Editing (text and attrs)</div>
             <div>Double click - Enter - Right click</div>
@@ -87,6 +98,7 @@
             <div>alt*0.1 shift*10 ctrl*100</div>
             <div>cls button</div>
         </div>
+
         <div class="section" data-hash="edthtml">
             <div>Editing (html)</div>
             <div>F2</div>
@@ -96,17 +108,20 @@
             <div>Select ALL > shift-tab to indent</div>
             <div>Undo - Redo</div>
         </div>
+
         <div class="section" data-hash="spcl">
             <div>Special elements</div>
             <div><img src="img/img.png" alt="sample image" style="width:50%"></div>
             <div><a href="https://www.youtube.com/channel/UC7Ca8ilbTCu9sj-Ux6JaGWw">Link</a></div>
             <div><iframe src="https://example.com/" width="90%" height="200px"></iframe></div>
         </div>
+
         <div class="section" data-hash="hl">
             <div>Highlight DOM changes</div>
             <div><button type="button" id="highlight_change_btn">click me!</button></div>
             <div id="highlight_change_div">highlight DOM changes</div>
         </div>
+
         <div class="section" data-hash="pseudo">
             <div>Pseudo classes</div>
             <div><input type="text" id="pseudo" name="pseudo" value="Pseudo classes"></div>
@@ -115,6 +130,7 @@
             <div>:hov button</div>
             <div>Orange dot</div>
         </div>
+
         <div class="section" data-hash="log">
             <div>Logging Elements</div>
             <!-- <div>Right click > break on</div> -->
@@ -127,6 +143,7 @@
             <div>dir(el)</div>
             <div>Scroll into view</div>
         </div>
+
         <div class="section" data-hash="opts">
             <div>Options</div>
             <div>Theme</div>
@@ -134,6 +151,7 @@
             <div>Auto open for popups <button type="button" id="popup_btn">popup!</button></div>
             <div>Disable paused state overlay</div>
         </div>
+
         <div class="section" data-hash="adv">
             <div>Advanced</div>
             <div>inspect the inspector ctrl-shift-j</div>
@@ -145,11 +163,12 @@
             <div>remote debug and inspect</div>
             <div>Restore defaults button</div>
         </div>
+
         <div class="section" data-hash="end">
             <div>End of part 1</div>
             <div>part2: css</div>
             <div>Share!</div>
-            <div>
+            <div id='yt-button-holder'>
                 <div class="g-ytsubscribe" data-channelid="UC7Ca8ilbTCu9sj-Ux6JaGWw" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
             </div>
             <div><a href="https://www.facebook.com/kelmteenjs">Add me on fb</a></div>
@@ -170,50 +189,11 @@
     <script src="js/lethargy.min.js"></script>
     <script src="https://rawgit.com/Olical/EventEmitter/master/EventEmitter.min.js"></script>
     <script src="js/smartscroll.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
 
     <script type="text/javascript">
-        function onYtEvent(payload) {
-            if (payload.eventType == 'subscribe') {
-                // Add code to handle subscribe event.
-            } else if (payload.eventType == 'unsubscribe') {
-                // Add code to handle unsubscribe event.
-            }
-            // if (window.console) { // for debugging only
-            //     window.console.log('YT event: ', payload);
-            // }
-        }
-
-        var ee = new EventEmitter();
-        $.smartscroll({
-            mode: "vp",
-            autoHash: true,
-            sectionScroll: true,
-            initialScroll: true,
-            keepHistory: true,
-            sectionWrapperSelector: ".section-wrapper",
-            sectionClass: "section",
-            animationSpeed: 500,
-            // headerHash: "header",
-            breakpoint: null,
-            eventEmitter: ee,
-            dynamicHeight: false
-        });
         document.getElementById('dom_js').innerText = "I'm js!";
-        $('#highlight_change_btn').click(function() {
-            var r = Math.round(Math.random() * 100) + '';
-            $('#highlight_change_div').html('<div>' + r + '</div>');
-            $('#highlight_change_btn').addClass(r)
-        });
-        $('#log_el_btn').click(function() {
-            console.log(this);
-        });
-        $('#log_jq_btn').click(function() {
-            console.log($(this));
-        });
-        $('#popup_btn').click(function() {
-            window.open('https://www.youtube.com/channel/UC7Ca8ilbTCu9sj-Ux6JaGWw', 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
-        });
     </script>
 </body>
 
